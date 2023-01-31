@@ -28,4 +28,18 @@ class AdminController extends Controller
         $data->save();
         return redirect()->back()->with('message','Product Added Successfully');
     }
+
+    public function showproduct()
+    {
+        $data = Product::all();
+        return view('admin.showproduct',compact('data'));
+    }
+
+    public function deleteproduct($id)
+    {
+        $data = Product::find($id);
+        $data->delete();
+        return redirect()->back()->with('message','Product Deleted');
+    }
+
 }
