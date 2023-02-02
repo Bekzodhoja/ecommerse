@@ -22,9 +22,10 @@ class HomeController extends Controller
         else
         {
             $data = Product::paginate(3);
+            $user = auth()->user();
+            $count = Cart::where('phone', $user->phone)->count();
 
-            
-            return view('user.home',compact('data'));
+            return view('user.home',compact('data','count'));
         }
 
     }
@@ -81,6 +82,16 @@ class HomeController extends Controller
         {
             return redirect('login');
         }
+    }
+
+
+    public function showcart()
+    {
+        $user = auth()->user();
+        $cart = Cart::where('phone', $user->phone)->get();
+        $count = Cart::where('phone', $user->phone)->count();
+        
+        return view('user.showcart',compact('count','cart'));
     }
 
 }
