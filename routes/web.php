@@ -32,6 +32,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/search', [HomeController::class, 'search']);
 Route::post('/addcart/{id}', [HomeController::class, 'addcart']);
 Route::get('/showcart', [HomeController::class, 'showcart']);
+Route::get('/delete/{id}', [HomeController::class, 'deletecart']);
 
 
 //Admin Controller
