@@ -30,6 +30,7 @@ Route::middleware([
 Route::get('/redirect', [HomeController::class, 'redirect']);
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/search', [HomeController::class, 'search']);
+Route::post('/addcart/{id}', [HomeController::class, 'addcart']);
 
 
 //Admin Controller
