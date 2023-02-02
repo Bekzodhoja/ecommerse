@@ -46,7 +46,7 @@
                         <img width="100 px" height="100px" src="/productimage/{{ $product->image }}" alt="">
                     </td>
                     <td>
-                        <a href="" class="btn btn-primary">Update</a>
+                        <a href="{{ url('updateview',$product->id) }}" class="btn btn-primary">Update</a>
                     </td>
                     <td>
                         <a href="{{ url('deleteproduct',$product->id) }}" class="btn btn-danger">Delete</a>
