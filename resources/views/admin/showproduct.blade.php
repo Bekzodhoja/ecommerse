@@ -49,7 +49,7 @@
                         <a href="{{ url('updateview',$product->id) }}" class="btn btn-primary">Update</a>
                     </td>
                     <td>
-                        <a href="{{ url('deleteproduct',$product->id) }}" class="btn btn-danger">Delete</a>
+                        <a onclick="return confirm('Are You Sure')" href="{{ url('deleteproduct',$product->id) }}" class="btn btn-danger">Delete</a>
                     </td>
 
                 </tr>
