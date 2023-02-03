@@ -44,5 +44,6 @@ Route::get('/deleteproduct/{id}', [AdminController::class, 'deleteproduct']);
 Route::get('/updateview/{id}', [AdminController::class, 'updateview']);
 Route::post('/updateproduct/{id}', [AdminController::class, 'updateproduct']);
 Route::get('/showorder', [AdminController::class, 'showorder']);
+Route::get('/updatestatus/{id}', [AdminController::class, 'updatestatus']);
 
 
