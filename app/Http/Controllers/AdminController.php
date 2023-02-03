@@ -65,4 +65,11 @@ class AdminController extends Controller
         $data->save();
         return redirect()->back()->with('message','Product Updated Successfully');
     }
+
+
+    public function showorder()
+
+     {
+        return view('admin.showorder');
+     }
 }
